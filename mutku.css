@@ -1,0 +1,80 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full screen body */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Background */
+.mutku-body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.mutku-body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+/* 🌈 BIG RAINBOW TEXT */
+.rainbow-text {
+    position: relative;
+    z-index: 1;
+
+    font-size: 100px;      /* 🔥 BIG SIZE */
+    font-weight: 900;
+    text-align: center;
+
+    animation: rainbow 2.5s linear infinite, float 4s ease-in-out infinite;
+
+    text-shadow:
+        3px 3px 8px rgba(0,0,0,0.9),
+        0 0 30px currentColor,
+        0 0 70px currentColor;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* 🌈 TRUE RAINBOW COLORS */
+@keyframes rainbow {
+    0%   { color: red; }
+    14%  { color: orange; }
+    28%  { color: yellow; }
+    42%  { color: green; }
+    57%  { color: cyan; }
+    71%  { color: blue; }
+    85%  { color: violet; }
+    100% { color: red; }
+}
+
+/* 📱 Mobile fix */
+@media (max-width: 768px) {
+    .rainbow-text {
+        font-size: 52px;
+    }
+}
