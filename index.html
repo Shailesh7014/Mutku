@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Name Verification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index-body">
+
+    <div class="container">
+        <h1>Enter Your Name</h1>
+
+        <input type="text" id="nameInput" placeholder="Enter name">
+        <button onclick="checkName()">Submit</button>
+    </div>
+
+    <script>
+        function checkName() {
+            const name = document.getElementById("nameInput").value.trim();
+            if (name === "Priya Shekhawat") {
+                window.location.href = "mutku.html";
+            } else {
+                alert("Incorrect Name ❌");
+            }
+        }
+    </script>
+
+</body>
+</html>
